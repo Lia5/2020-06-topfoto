@@ -181,6 +181,14 @@
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
         }
+        &--red {
+            color: #fff;
+            background-image: url('../img/bg-red.png');
+        }
+        &--last {
+            
+        background-image: url('../img/bg-last.png');
+        }
     }
     &__item1 {
         background-image: url('../img/bg1.png');

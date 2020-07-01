@@ -145,42 +145,10 @@ $(function() {
             
             } else if ($(this).closest('.step-slide').hasClass('step-slide--text') && $(this).closest('.step-slide').find('input').val() != '' ) {
                 $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
-
-                // bubble +500
-                if(jQuery('.quiz__discount-plus').length) {
-                    $('.quiz__discount-plus').addClass('bubble');
-                    setTimeout(function() {
-                        $('.quiz__discount-plus').removeClass('bubble');
-                    }, 1510);
-                }
-                
-                // итоговая скидка
-                if(jQuery('#total').length) {
-                    var sum = +($('#total').html());
-                    var total = sum + 1000;
-                    $('#total').html(total);
-                    console.log(total);
-                    
-                }
             } else {
                 if($(this).closest('.step-slide').find('input:checked').length) {
                     $(this).closest('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
                     
-                    // bubble +500
-                    if(jQuery('.quiz__discount-plus').length) {
-                        $('.quiz__discount-plus').addClass('bubble');
-                        setTimeout(function() {
-                            $('.quiz__discount-plus').removeClass('bubble');
-                        }, 1510);
-                    }
-                    // итоговая скидка
-                    if(jQuery('#total').length) {
-                        var sum = +($('#total').html());
-                        var total = sum + 1000;
-                        $('#total').html(total);
-                        console.log(total);
-                        
-                    }
                 } else {
                     $(this).closest('.prev-next-container').find('.quiz__error').text('Выберите вариант ответа!');
                 }
@@ -373,24 +341,6 @@ $(function() {
 		return false;
     });
 
-    if(jQuery('.time_of_day_hello').length) {
-        var night = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">й</span> <span class="animated">н</span><span class="animated">о</span><span class="animated">ч</span><span class="animated">и, </span>';
-        var morning = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">о</span><span class="animated">е</span> <span class="animated">у</span><span class="animated">т</span><span class="animated">р</span><span class="animated">о, </span>';
-        var day = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">д</span><span class="animated">е</span><span class="animated">н</span><span class="animated">ь, </span>';
-        var evening = '<span class="animated">Д</span><span class="animated">о</span><span class="animated">б</span><span class="animated">р</span><span class="animated">ы</span><span class="animated">й</span> <span class="animated">в</span><span class="animated">е</span><span class="animated">ч</span><span class="animated">е</span><span class="animated">р, </span>';
-            
-        var d = new Date()
-        var time = d.getHours()
-        if (time >= 5 && time < 12){
-            $('.time_of_day_hello').html(morning);
-        } else if (time >= 12 && time < 18) {
-            $('.time_of_day_hello').html(day);
-        } else if (time >= 18 && time < 23) {
-            $('.time_of_day_hello').html(evening);
-        } else {
-            $('.time_of_day_hello').html(night);
-        }
-    }
     if(jQuery('.list-title').length) {
         $('.list-title').on('click', function(){
             $(this).parent().toggleClass('active');
@@ -400,3 +350,42 @@ $(function() {
 
 });
 
+
+    // функция возвращает cookie с именем name, если есть, если нет, то undefined    
+    function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+    // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+    var alertwin = getCookie("alertwin");
+    console.log(alertwin);
+    if (alertwin != "no") { 
+        $(document).on('mouseleave', function() {
+            $('.modalLeave').removeClass('disabled');
+            var modalWrap = $('.modalLeave .modal__wrap');
+            modalWrap.removeClass('fadeOutUp');
+            modalWrap.addClass('fadeInDown');
+            // записываем cookie на 1 день, с которой мы не показываем окно
+            var date = new Date;
+            date.setDate(date.getDate() + 1);    
+            document.cookie = "alertwin=no; path=/; expires=" + date.toUTCString();
+       
+        });
+        $(document).click(function(e) {
+            if (($(".modalLeave").is(':visible')) && (!$(e.target).closest(".modalLeave .modal__body").length)) {
+                var modalWrap = $('.modalLeave .modal__wrap');
+                modalWrap.removeClass('fadeInDown');
+                modalWrap.addClass('fadeOutUp');
+                setTimeout(function() {
+                    $('.modalLeave').addClass('disabled');
+                }, 700);
+                setTimeout(function() {
+                    $('.modalLeave').removeClass('flex');
+                    $('body').removeClass('body-modal-open');
+                    $(".modalLeave").remove();
+              }, 800); 
+            }
+        });
+    } 

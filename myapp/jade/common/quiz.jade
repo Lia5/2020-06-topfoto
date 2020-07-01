@@ -135,7 +135,7 @@ section#quiz.quiz
                                             path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
                                             C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                             c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
-            .step-slide
+            .step-slide.step-slide--with-img
                 .quiz__wrap
                     .quiz-sidebar
                         .quiz-sidebar__pic
@@ -206,6 +206,12 @@ section#quiz.quiz
                         .quiz-sidebar__subtitle.text--medium 5 вопросов
                     .quiz__body
                         .step-slide__title Геодезические изыскания необходимы для:
+                        .step-slide__bottom
+                            .quiz-progress
+                                .quiz-progress__title Готово:
+                                    span 0%
+                                .quiz-progress__steps
+                                    .quiz-progress__item.active(style="width:0%")
                         .quiz__ans.question__ans--radio
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question4', value='Проектирования')
@@ -223,16 +229,10 @@ section#quiz.quiz
                                 input.pick-item__input(type='radio', name='question4', value='Получения разрешения на строительство')
                                 .pick-item__label Получения разрешения на строительство
                         .step-slide__bottom
-                            .quiz-progress
-                                .quiz-progress__title Готово:
-                                    span 28%
-                                .quiz-progress__steps
-                                    .quiz-progress__item.active(style="width:28%")
                             .prev-next-container
                                 .quiz__error
                                 a.btn.btn-prev.qa-prev(href='#') 
                                     span Назад
-                                a.btn.btn-prev.qa-prev(href='#') 
                                 .si-button-pulse
                                     a.btn.btn-next.qa-next(href='#').blick Далее
                                         svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
@@ -247,10 +247,8 @@ section#quiz.quiz
                                 img(src="img/foto.jpg", alt="Иван Лымар")
                             .quiz-sidebar__name Иван Лымар
                             .quiz-sidebar__position Генеральный директор
-                        
                         .quiz-sidebar__text 
                             p Цена за услугу формируется индивидуально и зависит от нескольких факторов. 
-                            p 
                                 span.text--medium Второй важный фактор - 
                                 | площадь участка. Градация стоимости у нас: до 30 соток, от 30 до 60 соток, от 60 соток и выше. 
                                 span.text--medium Важно: 
@@ -284,6 +282,17 @@ section#quiz.quiz
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question5', value='Ничего из вышеперечисленого')
                                 .pick-item__label Ничего из вышеперечисленого
+                        .step-slide__bottom
+                            .prev-next-container
+                                .quiz__error
+                                a.btn.btn-prev.qa-prev(href='#') 
+                                    span Назад
+                                .si-button-pulse
+                                    a.btn.btn-next.qa-next(href='#').blick Далее
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                            path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                            C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                            c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
             .step-slide
                 .quiz__wrap
                     .quiz-sidebar
@@ -292,10 +301,8 @@ section#quiz.quiz
                                 img(src="img/foto.jpg", alt="Иван Лымар")
                             .quiz-sidebar__name Иван Лымар
                             .quiz-sidebar__position Генеральный директор
-                        
                         .quiz-sidebar__text 
                             p Цена за услугу формируется индивидуально и зависит от нескольких факторов. 
-                            p 
                                 span.text--medium Второй важный фактор - 
                                 | площадь участка. Градация стоимости у нас: до 30 соток, от 30 до 60 соток, от 60 соток и выше. 
                                 span.text--medium Важно: 
@@ -316,7 +323,7 @@ section#quiz.quiz
                                 .pick-item__label в WhatsApp
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question6', value='Бесплатная консултация по телефону (хочу узнать об акциях, которые сейчас приходят')
-                                .pick-item__label 
+                                .pick-item__label.flex-column 
                                     span.text--medium Бесплатная консултация по телефону 
                                     | (хочу узнать об акциях, которые сейчас приходят
                             label.pick-item
@@ -334,107 +341,130 @@ section#quiz.quiz
                                             C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
                                             c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
             .step-slide.step-slide--text
-                .step-slide__title Укажите номер WhatsApp на который отправить точную стоимость и сроки выполнения работ по Вашему участку
-                p Укажите WhatsApp и забронируйте скидку 1 000 рублей на услугу топосъемки * 
-                .quiz__ans.quiz__ans--text
-                    label.pick-item.pick-item--text
-                        input(type='text', name='question5', placeholder='Номер телефона')
-                з Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
-                .step-slide__bottom
-                    .quiz-progress
-                        .quiz-progress__title Готово:
-                            span 40%
-                        .quiz-progress__steps
-                            .quiz-progress__item.active(style="width:40%")
-                
-                    .prev-next-container
-                        .quiz__error
-                        a.btn.btn-prev.qa-prev(href='#')
-                        .si-button-pulse
-                            a.btn.btn-next.qa-next(href='#').blick Далее
-                                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
-                                    path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
-                                    C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
-                                    c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
-                                        .step-slide.step-slide--text
-            
-            //- .step-slide.step-slide--finish
-            //-     .modal__title 
-            //-         span Вас отделяет всего 1 шаг
-            //-         | Мы подготовим 3 варианта с расчётом 
-            //-         br.br-desctop
-            //-         | эффективности продающего сайта для Вашего бизнеса 
+                .quiz__wrap
+                    .quiz-sidebar
+                        .quiz-sidebar__pic
+                            .quiz-sidebar__img
+                                img(src="img/foto.jpg", alt="Иван Лымар")
+                            .quiz-sidebar__name Иван Лымар
+                            .quiz-sidebar__position Генеральный директор
+                        .quiz-sidebar__text 
+                            p Цена за услугу формируется индивидуально и зависит от нескольких факторов. 
+                                span.text--medium Второй важный фактор - 
+                                | площадь участка. Градация стоимости у нас: до 30 соток, от 30 до 60 соток, от 60 соток и выше. 
+                                span.text--medium Важно: 
+                                | если у Вас 1га и больше, то стоимость будет скорее всего как для участка до 30 соток. Иногда поле в га проще снять чем участок в 10 соток со всеми строениями и коммуникациями.
+                        .quiz-sidebar__title.text--medium До выбора подарка осталось: 
+                        .quiz-sidebar__subtitle.text--medium 5 вопросов
+                    .quiz__body
+                        .step-slide__title Укажите номер WhatsApp на который отправить точную стоимость и сроки выполнения работ по Вашему участку
+                        p Укажите WhatsApp и забронируйте скидку 1 000 рублей на услугу топосъемки * 
+                        .quiz__ans.quiz__ans--text
+                            label.pick-item.pick-item--text
+                                input(type='text', name='question5', placeholder='Номер телефона')
+                        p Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
+                        .step-slide__bottom
+                            .prev-next-container
+                                .quiz__error
+                                a.btn.btn-prev.qa-prev(href='#') 
+                                    span Назад
+                                .si-button-pulse
+                                    a.btn.btn-next.qa-next(href='#').blick Далее
+                                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 31.49 31.49', style='enable-background:new 0 0 31.49 31.49;', xml:space='preserve')
+                                            path(style='fill:#fff;', d='M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111\
+                                            C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587\
+                                            c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z')
+            .step-slide.step-slide--thank
+                .quiz__wrap
+                    .quiz__thank
+                        .step-slide__title Спасибо за доверие!
+                        p 
+                            span.text--medium Наш инженер приступил к расчету стоимости. 
+                            br
+                            | Если у него возникунут опросы, он вам перезвонит. Как только расчет будет готов, мы отправим его Вам.
+                        .advantages__item.advantages__item--red Если с Вами оперативно не связались, не волнуйтесь, назначенный Вам инженер может быть занят и свяжется с Вами как только освободится
+                    .quiz__last-info
+                        .advantages__item.advantages__item--last 
+                            .advantages__text 
+                                span.text--medium После выполнения 
+                                | работ Вы получите все необходимые документы
+            .step-slide.step-slide--finish
+                .modal__title 
+                    span Вас отделяет всего 1 шаг
+                    | Мы подготовим 3 варианта с расчётом 
+                    br.br-desctop
+                    | эффективности продающего сайта для Вашего бизнеса 
 
-            //-     .modal__subtitle Наши маркетологи уже изучают Ваши ответы, чтобы проанализировать <br> эффективность внедрения продающего сайта в Вашем бизнесе. 
-            //-         br
-            //-         span Осталось корректно заполнить форму, чтобы получить всю информацию
+                .modal__subtitle Наши маркетологи уже изучают Ваши ответы, чтобы проанализировать <br> эффективность внедрения продающего сайта в Вашем бизнесе. 
+                    br
+                    span Осталось корректно заполнить форму, чтобы получить всю информацию
 
-            //-     .finish__body
-            //-         .finish-form
-            //-             .modal__title 
-            //-                 span Вам куда удобнее отправить расчет?
-            //-             .useful.social
-            //-                 label.useful__item
-            //-                     input.useful__input(type='radio', name='question11', value='sms')
-            //-                     .useful__label.social__item.social--sms 
-            //-                         img(src="img/icons/sms.png", alt="sms") 
-            //-                         span sms
-            //-                 label.useful__item
-            //-                     input.useful__input(type='radio', name='question11', value='sms')
-            //-                     .useful__label.social__item.social--viber 
-            //-                         img(src="img/icons/viber.svg", alt="viber") 
-            //-                         span Viber
-            //-                 label.useful__item
-            //-                     input.useful__input(type='radio', name='question11', value='Telegram')
-            //-                     .useful__label.social__item.social--telegram 
-            //-                         img(src="img/icons/telegram.svg", alt="telegram") 
-            //-                         span Telegram
-            //-                 label.useful__item
-            //-                     input.useful__input(type='radio', name='question11', value='WhatsApp')
-            //-                     .useful__label.social__item.social--wa 
-            //-                         img(src="img/icons/wa.png", alt="WhatsApp") 
-            //-                         span WhatsApp
+                .finish__body
+                    .finish-form
+                        .modal__title 
+                            span Вам куда удобнее отправить расчет?
+                        .useful.social
+                            label.useful__item
+                                input.useful__input(type='radio', name='question11', value='sms')
+                                .useful__label.social__item.social--sms 
+                                    img(src="img/icons/sms.png", alt="sms") 
+                                    span sms
+                            label.useful__item
+                                input.useful__input(type='radio', name='question11', value='sms')
+                                .useful__label.social__item.social--viber 
+                                    img(src="img/icons/viber.svg", alt="viber") 
+                                    span Viber
+                            label.useful__item
+                                input.useful__input(type='radio', name='question11', value='Telegram')
+                                .useful__label.social__item.social--telegram 
+                                    img(src="img/icons/telegram.svg", alt="telegram") 
+                                    span Telegram
+                            label.useful__item
+                                input.useful__input(type='radio', name='question11', value='WhatsApp')
+                                .useful__label.social__item.social--wa 
+                                    img(src="img/icons/wa.png", alt="WhatsApp") 
+                                    span WhatsApp
 
-            //-             .form-line
-            //-                 label
-            //-                     input(type="text" placeholder="Введите Ваш номер телефона" name="phone").rfield.phone-mask
-            //-                 .form-line-btn
-            //-                     .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
-            //-                         .blick
-            //-                             .ident
-            //-                                 input(type="submit" value="Получить расчет").quiz__btn 
-            //-             .agree
-            //-                 img(src="img/agree.png", alt="agree")
-            //-                 .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
-            //-                     a(href="policy.html" target="_blank").agree__policy с политикой конфиденциальности
-            //-         .finish-sidebar
-            //-             .finish-sidebar__item
-            //-                 .finish-sidebar__icon
-            //-                     img(src="img/icons/tick.png", alt="tick")
-            //-                 .finish-sidebar__name 
-            //-                     span чек-лист
-            //-                     br
-            //-                     | для директ
-            //-             .finish-sidebar__item
-            //-                 .finish-sidebar__icon
-            //-                     img(src="img/icons/computer.png", alt="computer")
-            //-                 .finish-sidebar__name 
-            //-                     span Аудит 
-            //-                     br
-            //-                     | вашего сайта
-            //-             .finish-sidebar__item
-            //-                 .finish-sidebar__icon
-            //-                     img(src="img/icons/loupe.png", alt="loupe")
-            //-                 .finish-sidebar__name 
-            //-                     span Аудит 
-            //-                     | вашего
-            //-                     br
-            //-                     | продукта
-            //-             //- .finish-sidebar__item
-            //-             //-     .finish-sidebar__icon.finish-sidebar__icon--work
-            //-             //-         img(src="img/icons/work.png", alt="work")
-            //-             //-     .finish-sidebar__name 
-            //-             //-         span Кейсы по 
-            //-             //-         br
-            //-             //-         | вашей нише
+                        .form-line
+                            label
+                                input(type="text" placeholder="Введите Ваш номер телефона" name="phone").rfield.phone-mask
+                            .form-line-btn
+                                .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
+                                    .blick
+                                        .ident
+                                            input(type="submit" value="Получить расчет").quiz__btn 
+                        .agree
+                            img(src="img/agree.png", alt="agree")
+                            .agree__text Нажимая кнопку «оставить заявку», вы даете согласие на обработку персональных данных и соглашаетесь 
+                                a(href="policy.html" target="_blank").agree__policy с политикой конфиденциальности
+                    .finish-sidebar
+                        .finish-sidebar__item
+                            .finish-sidebar__icon
+                                img(src="img/icons/tick.png", alt="tick")
+                            .finish-sidebar__name 
+                                span чек-лист
+                                br
+                                | для директ
+                        .finish-sidebar__item
+                            .finish-sidebar__icon
+                                img(src="img/icons/computer.png", alt="computer")
+                            .finish-sidebar__name 
+                                span Аудит 
+                                br
+                                | вашего сайта
+                        .finish-sidebar__item
+                            .finish-sidebar__icon
+                                img(src="img/icons/loupe.png", alt="loupe")
+                            .finish-sidebar__name 
+                                span Аудит 
+                                | вашего
+                                br
+                                | продукта
+                        //- .finish-sidebar__item
+                        //-     .finish-sidebar__icon.finish-sidebar__icon--work
+                        //-         img(src="img/icons/work.png", alt="work")
+                        //-     .finish-sidebar__name 
+                        //-         span Кейсы по 
+                        //-         br
+                        //-         | вашей нише
                 
