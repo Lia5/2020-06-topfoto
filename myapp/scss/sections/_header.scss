@@ -1,0 +1,273 @@
+nav {
+    a {
+        color: #252525;
+        @media screen and (max-width: 749px){
+            color: #090f21;
+        }
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+        padding-top: 24px;
+    }
+}
+.header {
+    &__adress {
+        color: #686868;
+        font-size: 14px;
+        text-align: right;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+
+        }
+        @media screen and (max-width: 749px){
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+        }
+    }
+    &__phone {
+        font-size: 23px;
+        font-weight: 500;
+        text-align: right;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+        }
+    }
+    &__group {
+        max-width: 255px;
+        @media screen and (max-width: 749px){
+
+        }
+        @media screen and (max-height: 850px) and  (min-width: 1081px) {
+
+        }
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    @media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+        margin-top: 14px;
+    }
+    @media screen and (max-width: 749px){
+
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    img {
+        width: 225px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            width: 197px;
+        }
+        @media screen and (max-width: 749px){
+            width: 178px;
+        }
+    	@media screen and (max-height: 850px) and  (min-width: 1081px) {
+            width: 192px;
+        }
+    }
+    &__text {
+        color: #7e7979;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+// .social {
+//     display: flex;
+//     transition: 0.3s;
+//     font-size: 16px;
+//     margin-top: 12px;
+//     font-weight: 700;
+//     @media screen and (max-width: 749px){
+//         padding: 0 11px;
+//         justify-content: center;
+//     }
+//     @media screen and (max-height: 850px) and  (min-width: 1081px) {
+//         font-size: 12px;
+//         margin-top: 8px;
+//     }
+//     &__item {
+//         display: flex;
+//         align-items: center;
+//         padding: 5px 11px;
+//         border-radius: 7px;
+//         @media only screen and (max-width: 1350px) and (orientation: portrait),
+//         screen and (max-width: 1080px) {
+//             padding: 5px 7px;
+//         }
+//         @media screen and (max-width: 749px){
+//             padding: 5px 11px;
+//         }
+//         @media screen and (max-height: 850px) and  (min-width: 1081px) {
+//             padding-top: 2px;
+//             padding-bottom: 2px;
+//         }
+//         &+.social__item {
+//             margin-left: 10px;
+//         }
+//     }
+//     img {
+//         margin-right: 7px;
+//     }
+//     &--viber {
+//         background: #222632;
+//         transition: 0.3s;
+//         img {
+//             width: 20px;
+//             height: 20px;
+//             @media screen and (max-height: 850px) and  (min-width: 1081px) {
+//                 width: 16px;
+//                 height: 16px;
+//             }
+//         }
+//         &:hover {
+//             background: #7d3daf;
+//         }
+//     }
+//     &--telegram {
+//         background: #222632;
+//         transition: 0.3s;
+//         @media screen and (max-width: 749px){
+//             padding: 5px 7px;
+//         }
+//         img {
+//             width: 17px;
+//             height: 17px;
+//             @media screen and (max-height: 850px) and  (min-width: 1081px) {
+//                 width: 15px;
+//                 height: 15px;
+//             }
+//         }
+//         &:hover {
+//             background: #039be5;
+//         }
+//     }
+//     a {
+//         color: #fff;
+//     }
+// }
+.example {
+    display: flex;
+    align-items: center;
+    &__pic{
+        text-align: center;
+        margin-right: 10px;
+        span {
+            display: block;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+    }
+    &__text {
+        font-size: 17px;
+    }
+}
+.bold {
+    font-weight: 500;
+}
+.mob {
+    display: none;
+    @media only screen and (max-width:  749px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 0;
+        right: -4px;
+    }
+    &-phone {
+        @media only screen and (max-width:  749px){
+            display: flex;
+        }
+    }
+}
+
+.menu-wrap {
+    width: 68%;
+}
+.menu-toggle {
+    display: none;
+}
+.cross {
+    display: none;
+}
+.main-menu {
+    font-size: 17px;
+    @media screen and (max-height: 850px) and  (min-width: 1081px) {
+        font-size: 14px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    a  {
+        display: flex;
+    }
+    .support {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @media screen and (max-width: 749px){
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        &__text {
+            font-weight: 700;
+            @media screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                display: none;
+            }
+            @media only screen and (max-width: 749px) {
+                display: block;
+            }
+        }
+        img {
+            width: 20px;
+            height: 25px;
+            margin-right: 10px;
+            @media screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                margin-left: 10px;
+            }
+        }
+        &__icon {
+            &--desctop {
+                @media only screen and (max-width: 749px) {
+                    display: none;
+                }
+            }
+            &--mob {
+                display: none;
+                @media only screen and (max-width: 749px) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
