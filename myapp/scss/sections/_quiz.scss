@@ -6,7 +6,7 @@
         display: flex;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-
+            flex-wrap: wrap;
         }
         @media screen and (max-width: 749px){
 
@@ -40,15 +40,33 @@
         line-height: 1;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-
-            
+            width: 100%;
+            order: 1;
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
         }
         @media screen and (max-width: 749px){
+
+        }
+        &__wrap {
+            padding-top: 10px;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                display: flex;
+                flex-wrap: wrap;
+                width: 70%;
+            }
 
         }
         &__pic {
             position: relative;
             margin-bottom: 20px;
+
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 30%;
+            }
             img {
                 width: 100%;
             }
@@ -74,6 +92,11 @@
         &__text {
             margin-bottom: 50px;
             padding: 0 10px;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 100%;
+                order: 1;
+            }
             p {
                 margin: 0 0 10px 0;
             }
@@ -83,12 +106,20 @@
             font-size: 16px;
             line-height: 21px;
             text-align: center;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 50%;
+            }
         }
         &__subtitle {
             padding: 0 10px;
             font-size: 28px;
             line-height: 1;
             text-align: center;
+            @media only screen and (max-width: 1350px) and (orientation: portrait),
+            screen and (max-width: 1080px) {
+                width: 50%;
+            }
         }
 
     }
@@ -137,6 +168,10 @@
     &__body {
         width: 76%;
         padding-left: 20px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            width: 100%;
+        }
     }
     &-progress {
         flex-grow: 1;
@@ -215,6 +250,8 @@
         flex-direction: column;
         padding: 53px 42px 29px 55px;
         min-height: 645px;
+        background: url('../img/quiz-bg.png') no-repeat;
+        background-size: 100% 100%;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             padding: 43px 18px 29px 15px;
@@ -279,10 +316,10 @@
                 overflow: hidden;
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
-                    width: 176px;
+            
                 }
                 @media screen and (max-width: 749px){
-                    width: 155px;
+  
                 }
                 img {
                     max-width: 100%;
@@ -293,140 +330,39 @@
                 margin-right: 1%;
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
-                    margin-left: -16px;
+        
                 }
                 @media screen and (max-width: 749px){
-                    width: 49%;
-                    margin-left: 0;
-                    margin-bottom: -21px;
+            
                 }
                 &:nth-child(2n+1):not(.pick-item--text) {
-                    margin-right: 1%;
+             
                 }
-                // &__label {
-                //     display: block;
-                //     font-size: 18px;
-                //     line-height: 1;
-                //     padding: 30px 10px 20px;
-                //     text-align: center;
-                //     @media only screen and (max-width: 1350px) and (orientation: portrait),
-                //     screen and (max-width: 1080px) {
-                //         font-size: 13px;
-                //         line-height: 18px;
-                //         margin-top: -10px;
-                //         padding-top: 34px;
-                //     }
-                //     @media screen and (max-width: 749px){
-                //         font-size: 11px;
-                //         line-height: 16px;
-                //         margin-top: -15px;
-                //         padding-top: 27px;
-                //     }
-                //     span {
-                //         font-weight: 700;
-                //     }
-                //     &:before {
-                //         top: 0;
-                //         left: 50%;
-                //         margin-right: -50%;
-                //         transform: translate(-50%, 0);
-                //     }
-                // }
+
             }
         }
         &--thank {
+            background: url('../img/th-bg.png') no-repeat;
+            background-size: 100% 100%;
             .quiz__thank {
                 width: 60%;
             }
             .quiz__last-info {
                 width: 40%;
             }
+            .step-slide__title {
+                font-size: 53px;
+                line-height: 1;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 20px;
+                line-height: 26px;
+            }
         }
         &--finish {
-            padding: 56px 93px 32px 39px;
-            background: #000 url('../img/bg-kviz.jpg') no-repeat;
-            background-position: top center;
-            background-size: cover;
-            position: relative;
-            &:after {
-                content: "";
-                position: absolute;
-                top: 6px;
-                left: 6px;
-                width: 100%;
-                width: calc( 100% - 12px );
-                height: 100%;
-                height: calc( 100% - 12px );
-                background: url('../img/border-mob.png') no-repeat;
-                background-position: top center;
-                background-size: 100% 100%;
-                pointer-events: none;
-            }
-            @media only screen and (max-width: 1350px) and (orientation: portrait),
-            screen and (max-width: 1080px) {
-                padding-right: 43px;
-                // background-image: url('../img/bg-kviz-750.jpg');
-            }
-            @media screen and (max-width: 749px){
-                background-image: url('../img/bg-kviz-320.jpg');
-                padding: 47px 17px 62px 21px;
-            }
-        	@media screen and (max-width: 480px){
-                padding-bottom: 27px;
-            }
-            .modal__title {
-                color: #e8ebf4;
-                font-size: 34px;
-                line-height: 40px;
-                text-align: left;
-                letter-spacing: 2px;
-                @media only screen and (max-width: 1350px) and (orientation: portrait),
-                screen and (max-width: 1080px) {
-                    margin-bottom: 8px;
-                }
-                @media screen and (max-width: 749px){
-                    font-size: 27px;
-                    line-height: 33px;
-                    // margin-bottom: 17px;
-                }
-                @media screen and (max-width: 419px){
-                    // font-size: 19px;
-                    // line-height: 24px;
-                    // letter-spacing: 1px;
-                }
-                span {
-                    display: block;
-                    color: #ff9232;
-                }
-            }
-            .modal__subtitle {
-                max-width: 660px;
-                font-weight: 200;
-                color: #fff;
-                font-size: 18px;
-                line-height: 21px;
-                text-align: left;
-                margin-left: 0;
-                @media only screen and (max-width: 1350px) and (orientation: portrait),
-                screen and (max-width: 1080px) {
-                    margin-bottom: 21px;
-                }
-                @media screen and (max-width: 749px){
-                    font-size: 15px;
-                }
-                span {
-                    font-weight: 700;
-                }
-            }
-            .form-line {
-                display: flex;
-            }
-            br.br-desctop {
-                @media screen and (max-width: 749px){
-                    display: none;
-                }
-                
-            }
+
+
         }
     }
 }
@@ -438,12 +374,12 @@
     @media screen and (max-width: 749px){
         width: 100%;
     }
-    &:nth-child(2n+1):not(.pick-item--text) {
-        margin-right: 2%;
-        @media screen and (max-width: 749px){
-            margin-right: 0;
-        }
-    }
+    // &:nth-child(2n+1):not(.pick-item--text) {
+    //     margin-right: 2%;
+    //     @media screen and (max-width: 749px){
+    //         margin-right: 0;
+    //     }
+    // }
     &__input {
         display: none;
         width: 185px;
@@ -515,6 +451,7 @@
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             min-height: 59px;
+            font-size: 15px;
         }
         @media screen and (max-width: 749px){
             min-height: 53px;
@@ -675,4 +612,13 @@
 }
 .flex-column {
     flex-direction: column;
+}
+.quiz__left {
+    width: 44%;
+}
+.quiz__right {
+    width: 32%;
+    img {
+        max-width: 100%;
+    }
 }

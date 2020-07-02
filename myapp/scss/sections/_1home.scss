@@ -31,7 +31,7 @@
         padding-right: 20px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-
+            width: 100%;
         }
         @media screen and (max-width: 749px){
 
@@ -146,7 +146,7 @@
     padding-top: 30px;
     @media only screen and (max-width: 1350px) and (orientation: portrait),
     screen and (max-width: 1080px) {
-
+        width: 100%;
     }
     @media screen and (max-width: 749px){
 
@@ -173,7 +173,7 @@
         width: 25%;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-
+      
         }
         @media screen and (max-width: 749px){
 
@@ -208,6 +208,11 @@
         font-size: 14px;
         line-height: 20px;
         margin-bottom: auto;
+
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            display: none;
+        }
     }
     &__item4 {
         background-image: url('../img/bg3.png');
