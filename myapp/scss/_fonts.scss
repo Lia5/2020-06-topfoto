@@ -1,5 +1,6 @@
 @import "_mixins/font-face";
 
 @include font-face("Muller", "../fonts/MullerLight/MullerLight", 200);
+@include font-face("Muller", "../fonts/MullerRegular/MullerRegular", 400);
 @include font-face("Muller", "../fonts/MullerMedium/MullerMedium", 500);
 @include font-face("Muller", "../fonts/MullerBold/MullerBold", 700);
