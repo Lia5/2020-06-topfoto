@@ -376,6 +376,8 @@
             }
         }
         &--thank {
+            padding-left: 70px;
+            padding-right: 70px;
             background: url('../img/th-bg.png') no-repeat;
             background-size: 100% 100%;
             .quiz__thank {
@@ -666,6 +668,9 @@
             font-size: 16px;
         }
     }
+    .step-slide__bottom {
+        position: relative;
+    }
 }
 .agree {
     font-size: 13px;
@@ -682,6 +687,18 @@
         margin-top: auto;
         max-width: 100%;
     }
+}
+.quiz__last-info {
+    .advantages__item {
+        width: 41%;
+    }
+}
+.quiz__thank {
+    .advantages__item {
+        width: 32%;
+        text-align: center;
+    }
+    
 }
 .quizForm {
     .phone-mask {

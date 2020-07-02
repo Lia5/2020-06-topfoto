@@ -48,15 +48,6 @@ section#quiz.quiz
                                     span 0%
                                 .quiz-progress__steps
                                     .quiz-progress__item.active(style="width:0%")
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
                         .quiz__ans.question__ans--radio
                             label.pick-item
                                 .label-img
@@ -111,16 +102,7 @@ section#quiz.quiz
                                 .quiz-progress__title Готово: 
                                     span 12.5%
                                 .quiz-progress__steps
-                                    .quiz-progress__item.active(style="width:13.5%")
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
+                                    .quiz-progress__item.active(style="width:12.5%")
                         .quiz__ans.question__ans--radio
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question2', value='До 15 соток')
@@ -171,16 +153,7 @@ section#quiz.quiz
                                 .quiz-progress__title Готово: 
                                     span 25%
                                 .quiz-progress__steps
-                                    .quiz-progress__item.active(style="width:26%")
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
+                                    .quiz-progress__item.active(style="width:25%")
                         .quiz__ans.question__ans--radio
                             label.pick-item
                                 .label-img
@@ -232,16 +205,7 @@ section#quiz.quiz
                                 .quiz-progress__title Готово: 
                                     span 37.5%
                                 .quiz-progress__steps
-                                    .quiz-progress__item.active(style="width:38.5%")
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
+                                    .quiz-progress__item.active(style="width:37.5%")
                         .quiz__ans.question__ans--radio
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question4', value='Проектирования')
@@ -293,16 +257,7 @@ section#quiz.quiz
                                 .quiz-progress__title Готово: 
                                     span 50%
                                 .quiz-progress__steps
-                                    .quiz-progress__item.active(style="width:51%")
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
+                                    .quiz-progress__item.active(style="width:50%")
                         .quiz__ans.question__ans--radio
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question5', value='Геологические изыскания')
@@ -351,34 +306,25 @@ section#quiz.quiz
                             .quiz-sidebar__title.text--medium До выбора подарка осталось: 
                             .quiz-sidebar__subtitle.text--medium 2 вопроса
                     .quiz__body
-                        .step-slide__title Дополнительно требуются:
+                        .step-slide__title Куда отправить расчёт стоимости топосьемки
                         .step-slide__bottom
                             .quiz-progress
                                 .quiz-progress__title Готово: 
                                     span 62.5%
                                 .quiz-progress__steps
-                                    .quiz-progress__item.active(style="width:63.5%")
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                                    .quiz-progress__step
-                        .quiz__ans.question__ans--radio
+                                    .quiz-progress__item.active(style="width:62.5%")
+                        .quiz__ans.question__ans--radio(style="display: block")
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question6', value='в WhatsApp')
                                 .pick-item__label в WhatsApp
+                            label.pick-item
+                                input.pick-item__input(type='radio', name='question6', value='по СМС')
+                                .pick-item__label по СМС
                             label.pick-item
                                 input.pick-item__input(type='radio', name='question6', value='Бесплатная консултация по телефону (хочу узнать об акциях, которые сейчас приходят')
                                 .pick-item__label.flex-column 
                                     span.text--medium Бесплатная консултация по телефону 
                                     | (хочу узнать об акциях, которые сейчас приходят
-                            label.pick-item
-                                input.pick-item__input(type='radio', name='question6', value='по СМС')
-                                .pick-item__label по СМС
                         .step-slide__bottom
                             .prev-next-container
                                 .quiz__error
@@ -422,10 +368,10 @@ section#quiz.quiz
                                 span.policy политикой конфиденциальности
                             .step-slide__bottom
                                 .form-line-btn
-                                    .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
+                                    .quiz__error
+                                    .btn.btn-finish.si-button-pulse
                                         .blick
-                                            .ident
-                                                input(type="submit" value="Получить расчет").quiz__btn
+                                            input(type="submit" value="Получить расчет").quiz__btn
                     .quiz__right
                         img(src="img/q-f.png", alt="phone")
             .step-slide.step-slide--thank
@@ -436,7 +382,9 @@ section#quiz.quiz
                             span.text--medium Наш инженер приступил к расчету стоимости. 
                             br
                             | Если у него возникунут опросы, он вам перезвонит. Как только расчет будет готов, мы отправим его Вам.
-                        .advantages__item.advantages__item--red Если с Вами оперативно не связались, не волнуйтесь, назначенный Вам инженер может быть занят и свяжется с Вами как только освободится
+                        .advantages__item.advantages__item--red 
+                            span.text--bold Если с Вами оперативно не связались, 
+                            | не волнуйтесь, назначенный Вам инженер может быть занят и свяжется с Вами как только освободится
                     .quiz__last-info
                         .advantages__item.advantages__item--last 
                             .advantages__text 

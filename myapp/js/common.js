@@ -45,7 +45,7 @@ $(function() {
     //select-number form
     if(jQuery('.phone-mask').length) {
         jQuery(function($){
-            $(".phone-mask").mask("1 (111) 111-1111");
+            $(".phone-mask").mask("+7 (111) 111-11-11");
         });
     }
 
@@ -298,11 +298,10 @@ $(function() {
                     
 
                     if (!form.find('.empty_field').length) {
-                        if(form.attr("name") == "podderjka"){
-                            ym(62113519,'reachGoal','callback');
-                        }
                         if(form.attr("name") == "quiz"){
-                            ym(62113519,'reachGoal','order'); 
+                            $('.step-slide--last').removeClass('active');
+                            $('.step-slide--thank').addClass('active');
+                            // ym(62113519,'reachGoal','order'); 
                         }
                         $.ajax({
                             type: "POST",
@@ -325,6 +324,9 @@ $(function() {
                                 // form.trigger("reset");
                             }, 1000);
                         });
+                        console.log('123333');
+
+                        
 
                         $.ajax({
                             method: "POST",
