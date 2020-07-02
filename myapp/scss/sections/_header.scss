@@ -15,15 +15,16 @@ nav {
 header {
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 14px;
     @media screen and (max-height: 850px) and  (min-width: 1081px) {
-        padding-top: 24px;
+        // padding-top: 24px;
     }
 }
 .header {
     &__adress {
         color: #686868;
         font-size: 14px;
+        line-height: 1;
         text-align: right;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
@@ -36,11 +37,11 @@ header {
         }
     }
     &__phone {
-        font-size: 23px;
+        font-size: 26px;
         font-weight: 500;
         text-align: right;
         justify-content: flex-end;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
 
@@ -86,6 +87,8 @@ header {
         }
     }
     &__text {
+        max-width: 203px;
+        margin-top: 24px;
         color: #7e7979;
         font-weight: 500;
         margin-left: 10px;
@@ -207,7 +210,8 @@ header {
 }
 
 .menu-wrap {
-    width: 68%;
+    width: 55%;
+    padding-top: 18px;
 }
 .menu-toggle {
     display: none;

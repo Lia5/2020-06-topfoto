@@ -1,7 +1,7 @@
 .quiz {
     background: url('../img/clouds.jpg');
     margin-top: -50px;
-    padding-top: 100px;
+    padding-top: 167px;
     &__wrap {
         display: flex;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
@@ -14,16 +14,16 @@
     }
     &__maintitle {
         font-size: 48px;
-        line-height: 1;
+        line-height: 1.2;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 23px;
     }
     &__mainsubtitle {
         font-size: 21px;
         line-height: 28px;
         text-align: center;
         color: #898989;
-        margin-bottom: 20px;
+        margin-bottom: 28px;
 
     }
     &-sidebar {
@@ -248,17 +248,16 @@
     &-slide {
         display: none;
         flex-direction: column;
-        padding: 53px 42px 29px 55px;
         min-height: 645px;
+        padding: 26px 0 55px;
         background: url('../img/quiz-bg.png') no-repeat;
         background-size: 100% 100%;
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-            padding: 43px 18px 29px 15px;
+
             min-height: 584px;
         }
         @media screen and (max-width: 749px){
-            padding: 2px 8px 29px;
         }
         &--active {
             display: flex;
