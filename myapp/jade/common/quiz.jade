@@ -409,12 +409,17 @@ section#quiz.quiz
                             .quiz-sidebar__subtitle.text--medium 1 вопрос
                     .quiz__left
                         .quiz__body
-                            .step-slide__title Укажите номер WhatsApp на который отправить точную стоимость и сроки выполнения работ по Вашему участку
+                            .step-slide__title 
+                                span.text--bold Укажите номер WhatsApp 
+                                span на который отправить точную стоимость и сроки выполнения работ по Вашему участку
                             p Укажите WhatsApp и забронируйте скидку 1 000 рублей на услугу топосъемки * 
                             .form-line.quiz__ans.quiz__ans--text
                                 label.pick-item.pick-item--text
                                     input(type="text" placeholder="Номер телефона" name="phone").rfield.phone-mask
-                            p Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
+                            .agree 
+                                span.text--medium Нажимая на кнопку, 
+                                | вы даете согласие на обработку персональных данных и соглашаетесь с 
+                                span.policy политикой конфиденциальности
                             .step-slide__bottom
                                 .form-line-btn
                                     .btn.btn-finish(data-modal="#modalFinish").si-button-pulse
@@ -422,8 +427,7 @@ section#quiz.quiz
                                             .ident
                                                 input(type="submit" value="Получить расчет").quiz__btn
                     .quiz__right
-                        .qiuz__pic
-                            img(src="img/q-f.png", alt="phone")
+                        img(src="img/q-f.png", alt="phone")
             .step-slide.step-slide--thank
                 .quiz__wrap
                     .quiz__thank

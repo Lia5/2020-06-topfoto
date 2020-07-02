@@ -51,6 +51,7 @@
         }
         &__wrap {
             padding: 24px 25px 10px;
+            min-height: 494px;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
                 display: flex;
@@ -646,12 +647,14 @@
         padding-right: 21px;
     }
     .step-slide__title {
+        display: block;
         line-height: 1.3;
-        margin-bottom: 13px;
+        margin-bottom: 23px;
+        font-weight: 400;
     }
     p {
 
-        margin: 0 0 41px 23px;
+        margin: 0 0 52px 23px;
         line-height: 1.5;
         letter-spacing: 1px;
         font-size: 18px;
@@ -659,11 +662,24 @@
     }
     .phone-mask {
         max-width: 320px;
+        &::placeholder {
+            font-size: 16px;
+        }
     }
+}
+.agree {
+    font-size: 13px;
+    line-height: 17px;
+    margin: 14px 10px 45px 12px;
+    max-width: 300px;
+    font-size: 13px;
+    line-height: 17px;
 }
 .quiz__right {
     width: 32%;
+    display: flex;
     img {
+        margin-top: auto;
         max-width: 100%;
     }
 }

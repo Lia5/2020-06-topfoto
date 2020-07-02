@@ -359,8 +359,7 @@
 }
 .modalLeave {
   .modal__body {
-    background: #fff;
-    background: url(../img/bg.jpg) no-repeat;
+    background: #fff url(../img/bg.jpg) no-repeat;
     background-size: cover;
   }
   &__title {
