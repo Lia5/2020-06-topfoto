@@ -26,7 +26,7 @@
   &__body {
     position: relative;
     background: #fff;
-    padding: 68px 50px 50px;
+    padding: 5% 3% 5% 7%;
     border-radius: 7px;
 
     @media only screen and (max-width: 749px) {
@@ -359,31 +359,33 @@
 }
 .modalLeave {
   .modal__body {
+    background: #fff;
     background: url(../img/bg.jpg) no-repeat;
     background-size: cover;
   }
   &__title {
     font-size: 43px;
     line-height: 51px;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
     max-width: 513px;
   }
   &__subtitle {
     color: #898989;
     font-size: 17px;
-    padding: 0 5px 15px;
+    padding: 0 5% 22px;
   }
   &__list {
-    padding: 0 0 0 5px;
-    margin: 0;
+    padding: 0 3% 0 3%;
+    margin: 0 0 28px 0;
     list-style: none;
     li {
-      padding-left: 10px;
+      padding: 10px 2%;
       position: relative;
+      font-size: 22px;
       &:before {
         content: "";
         position: absolute;
-        top: 0;
+        top: 14px;
         left: 0;
         width: 8px;
         height: 8px;
@@ -396,8 +398,8 @@
 }
 .useful {
   display: flex;
-  margin-bottom: 18px;
-  padding-left: 0;
+  margin-bottom: 40px;
+  padding-left: 10px;
   @media screen and (max-width: 749px) {
       justify-content: flex-start;
       margin-bottom: 40px;
@@ -436,7 +438,7 @@
       align-items: center;
       border: 1px solid #efefef;
       background: #f8f8f8;
-      padding: 10px 35px;
+      padding: 28px 38px;
       border-radius: 5px;
       &:hover {
         border-color: $accent;

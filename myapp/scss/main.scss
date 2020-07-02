@@ -184,7 +184,7 @@ ul,li {
 .btn {
 	position: relative;
 	display: inline-block;
-	font-size: 13px;
+	font-size: 15px;
 	text-transform: uppercase;
 	line-height: 1.4;
 	color: #fff;
@@ -228,7 +228,8 @@ ul,li {
 		.quiz__btn {
 			display: block;
 			color: #fff;
-			padding: 24px 30px 24px 7px;
+			padding: 35px 10px 35px 10px;
+		    text-transform: uppercase;
 			background: transparent;
 			font-size: 15px;
 			font-weight: 700;
@@ -240,9 +241,10 @@ ul,li {
 	}
 	&-next {
 		display: block;
-		min-width: 168px;
-		padding: 15px;
+		min-width: 205px;
+		padding: 25px 30px;
 		box-shadow: none;
+		font-weight: 700;
 		@media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
 			min-width: 154px;
@@ -260,12 +262,13 @@ ul,li {
 	}
 	&-prev {
 		display: block;
-		min-width: 67px;
-		padding: 15px;
+		min-width: 205px;
+		padding: 25px 30px;
 		margin-right: 21px;
 		position: relative;
 		background: linear-gradient(to right,#d8d8d8,#f3f3f3);
 		box-shadow: none;
+		font-weight: 700;
 		@media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
 			min-width: 55px;
