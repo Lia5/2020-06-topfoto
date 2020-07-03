@@ -19,6 +19,7 @@
             transition-duration: .3s;
         }
         &.active {
+            left: 9px;
             .one,
             .three {
                 margin: 8px auto;
@@ -41,20 +42,19 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(0, 0, 0, 0.61);
             z-index: 3;
             right: 0;
             top: 0;
             ul {
                 display: block;
                 background: #fff;
-                padding: 31px 6px 36px 3px;
+                padding: 31px 30px 36px 53px;
                 // flex-direction: column;
                 align-items: center;
-                margin: 11px 15px 0;
+                margin: 0 15px 0;
                 text-align: center;
                 color: #090f21;
-                border-radius: 7px;
             } 
         }
     }

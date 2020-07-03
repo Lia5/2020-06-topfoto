@@ -61,7 +61,7 @@ header {
     &__group {
         max-width: 255px;
         @media screen and (max-width: 749px){
-
+            max-width: none;
         }
         @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
@@ -196,9 +196,15 @@ header {
 	screen and (max-width: 1080px) {
         display: none;
     }
+    @media only screen and (max-width:  749px){
+        display: block;
+    }
     &__pic{
         text-align: center;
         margin-right: 10px;
+        @media only screen and (max-width:  749px){
+            margin-right: 15px;
+        }
         span {
             display: block;
             font-size: 13px;
@@ -207,6 +213,9 @@ header {
     }
     &__text {
         font-size: 17px;
+        @media only screen and (max-width:  749px){
+            text-align: left;
+        }
     }
 }
 .main-menu a.example {
@@ -216,6 +225,11 @@ header {
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
 	screen and (max-width: 1080px) {
         display: none;
+    }
+    @media only screen and (max-width:  749px){
+        display: flex;
+        justify-content: flex-end;
+        max-width: none;
     }
 }
 .bold {
