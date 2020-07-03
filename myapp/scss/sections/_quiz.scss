@@ -233,6 +233,14 @@
             padding: 0 17px;
         }
     }
+    &__body4 {
+        background: url('../img/q4.jpg') no-repeat;
+        background-position: bottom right 20px;
+    }
+    &__body5 {
+        background: url('../img/q5.jpg') no-repeat;
+        background-position: bottom right;
+    }
     &-progress {
         flex-grow: 1;
         padding-right: 30px;
