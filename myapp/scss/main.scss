@@ -89,7 +89,9 @@ body {
 		background-position: top center;
 	}
 	@media screen and (max-width: 749px){
+		background-size: cover;
 		 background-image: url('../img/main-bg-320.jpg');
+		 background-position-y: -182px;
 	}
 }
 .img-responsive {

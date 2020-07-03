@@ -41,6 +41,16 @@ $(function() {
             return false;
         });
     }
+    if(jQuery('.advantages__control').length) {
+        $('.advantages__control a').click(function(e){
+            var $link = $(this).attr("href");
+            $('.advantages__wrap').animate({
+                scrollLeft: $('.advantages__wrap').scrollLeft() + $($link).offset().left
+            }, 1000);
+            $(this).prev().addClass('active').siblings().removeClass('active');
+            e.preventDefault();
+        });
+    }
 
     //select-number form
     if(jQuery('.phone-mask').length) {
