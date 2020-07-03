@@ -11,6 +11,7 @@
     screen and (max-width: 1080px) {
         padding-bottom: 27px;
         padding-top: 43px;
+        overflow: hidden;
     }
     @media screen and (max-width: 749px){
         padding-top: 53px;
@@ -176,6 +177,23 @@
     @media screen and (max-height: 850px) and  (min-width: 1081px) {
 
     }
+    &:before {
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            content: "";
+            position: absolute;
+            bottom: 10%;
+            left: -10%;
+            width: 120%;
+            height: 65%;
+            background: #fff;
+            z-index: -1;
+        }
+        @media screen and (max-width: 749px){
+            bottom: -13%;
+            height: 41%;
+        }
+    }
     &__wrap {
         display: flex;
         position: relative;
@@ -212,6 +230,9 @@
                 position: relative;
                 margin-top: 40px;
             }
+            @media screen and (max-width: 749px){
+                display: none;
+            }
         }
         &--mob {
             display: none;
@@ -220,6 +241,8 @@
                 padding: 10px 5px 10px 60px;
                 position: relative;
                 margin-top: 0;
+                max-width: 210px;
+                margin: 0 auto;
 
             }
         }

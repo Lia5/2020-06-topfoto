@@ -68,11 +68,11 @@
             order: 1;
             display: flex;
             flex-direction: row;
-            margin-top: 73px;
         }
         @media screen and (max-width: 749px){
             flex-direction: column;
             background-image: none;
+            background: transparent;
         }
         &__wrap {
             padding: 24px 25px 10px;
@@ -177,7 +177,19 @@
                 display: flex;
                 img {
                     margin-top: auto;
+                    @media screen and (max-width: 749px){
+                        display: none;
+                    }
+                    &.quiz-sidebar__img--mob {
+                            
+                        @media screen and (max-width: 749px){
+                            display: block;
+                        }
+                    }
                 }
+            }
+            &--mob {
+                display: none;
             }
         }
 
@@ -232,14 +244,81 @@
             width: 100%;
             padding: 0 17px;
         }
+
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            padding-bottom: 73px;
+        }
     }
     &__body4 {
         background: url('../img/q4.jpg') no-repeat;
         background-position: bottom right 20px;
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
+            background-position: bottom right -120px;
+        }
+        @media screen and (max-width: 749px){
+            position: relative;
+            background: none;
+            overflow: hidden;
+            &:before {
+                content: "";
+                pointer-events: none;
+                position: absolute;
+                bottom: 0;
+                right: -19vw;
+                width: 376px;
+                height: 391px;
+                background: url('../img/q4.jpg') no-repeat;
+                transform: rotate(-59deg);
+            }
+        }
+        @media screen and (max-width: 493px){
+            &:before {
+                right: auto;
+                left: 51vw;
+            }
+        }
+        @media screen and (max-width: 379px){
+            &:before {
+                right: auto;
+                left: 61vw;
+            }
+        }
     }
     &__body5 {
         background: url('../img/q5.jpg') no-repeat;
         background-position: bottom right;
+        @media screen and (max-width: 880px){
+            background-size: 154px 213px;
+        }
+        @media screen and (max-width: 549px){
+            position: relative;
+            background: none;
+            overflow: hidden;
+            &:before {
+                content: "";
+                pointer-events: none;
+                position: absolute;
+                bottom: 0;
+                right: -62vw;
+                width: 376px;
+                height: 391px;
+                background: url('../img/q5.jpg') no-repeat;
+                transform: rotate(-27deg);
+            }
+        }
+        @media screen and (max-width: 411px){
+            &:before {
+                left: 71vw;
+                bottom: 58px;
+            }
+        }
+        @media screen and (max-width: 379px){
+            &:before {
+                left: 84vw;
+            }
+        }
     }
     &-progress {
         flex-grow: 1;
@@ -364,6 +443,7 @@
         }
         @media screen and (max-width: 749px){
             padding-top: 73px;
+            background: none;
         }
         &--active {
             display: flex;
@@ -459,7 +539,8 @@
                         min-height: 53px;
                         margin-top: 22px;
                         margin-bottom: -20px;
-                        padding-left: 13px;
+                        padding-left: 0;
+                        padding-right: 0;
                         text-align: center;
                         justify-content: center;
                         align-items: flex-start;
@@ -801,6 +882,8 @@
 }
 .flex-column {
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 .quiz__left {
     width: 44%;
@@ -810,10 +893,18 @@
     screen and (max-width: 1080px) {
         width: 69%;
     }
+    @media screen and (max-width: 749px){
+        width: 100%;
+    }
     .quiz__body {
         width: 100%;
         padding-left: 40px;
         padding-right: 21px;
+
+        @media screen and (max-width: 749px){
+            padding-left: 14px;
+            padding-right: 14px;
+        }
     }
     .step-slide__title {
         display: block;
@@ -828,6 +919,10 @@
         letter-spacing: 1px;
         font-size: 18px;
         max-width: 339px;
+        @media screen and (max-width: 749px){
+            margin-left: 0;
+            font-size: 16px;
+        }
     }
     .phone-mask {
         max-width: 320px;
@@ -850,6 +945,11 @@
     screen and (max-width: 1080px) {
         margin: 44px 10px 85px 12px;
     }
+    @media screen and (max-width: 749px){
+        font-size: 11px;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
 }
 .quiz__right {
     width: 32%;
@@ -859,7 +959,15 @@
     screen and (max-width: 1080px) {
         width: 31%;
         position: relative;
-        &:after {
+    }
+    @media screen and (max-width: 749px){
+        width: 100%;
+        height: 244px;
+        overflow: hidden;
+    }
+    &:after {
+        @media only screen and (max-width: 1350px) and (orientation: portrait),
+        screen and (max-width: 1080px) {
             content: "";
             position: absolute;
             bottom: -73px;
@@ -868,6 +976,11 @@
             height: 100%;
             background: url('../img/q-f.png') no-repeat;
             background-position: bottom right;
+        }
+        @media screen and (max-width: 749px){
+            background-position: top center;
+            background-size: 209px;
+            right: -53px;
         }
     }
     img {
@@ -898,5 +1011,9 @@
     }
     .form-line {
         padding-left: 10px;
+        @media screen and (max-width: 749px){
+            padding-left: 0;
+        }
+
     }
 }
