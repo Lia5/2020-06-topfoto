@@ -49,6 +49,35 @@ $(function() {
         });
     }
 
+    // if( window.innerWidth < 1081 || window.screen.width < 1081){
+    //     $('.advantages').slick({
+    //         infinite: true,
+    //         slidesToShow: 3,
+    //         slidesToScroll: 2,
+    //         variableWidth: true,
+    //         arrows: false,
+    //         dots: false,
+    //         responsive: [
+    //             {
+    //               breakpoint: 1082,
+    //               settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 2,
+    //                 arrows: false,
+    //                 centerPadding: '40px',
+    //                 slidesToShow: 1
+    //               }
+    //             },
+    //             {
+    //               breakpoint: 480,
+    //               settings: {
+    //                 arrows: false,
+    //                 slidesToShow: 1
+    //               }
+    //             }
+    //           ]
+    //       });
+    // }
     if (jQuery('.tooltip').length) {
         if (window.innerWidth < 1350 || window.screen.width < 1350) {
             $('.tooltip__title').on('click', function () {

@@ -6,14 +6,14 @@
         width: 26px;
         height: 23px;
         position: absolute;
-        top: -12px;
+        top: -30px;
         left: 0;
         cursor: pointer;
         z-index: 4;
         .one, .two, .three {
             width: 100%;
             height: 3px;
-            background: #fff;
+            background: #222532;
             margin: 4px auto;
             backface-visibility: hidden;
             transition-duration: .3s;
@@ -51,7 +51,7 @@
                 padding: 31px 6px 36px 3px;
                 // flex-direction: column;
                 align-items: center;
-                margin: 11px 15px 0 57px;
+                margin: 11px 15px 0;
                 text-align: center;
                 color: #090f21;
                 border-radius: 7px;

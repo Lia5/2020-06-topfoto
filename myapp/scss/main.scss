@@ -78,17 +78,18 @@ body {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	background: url('../img/main-bg2.png') no-repeat;
+	background: url('../img/main-bg.png') no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
 	z-index: 1;
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
 	screen and (max-width: 1080px) {
-		background-size: cover;
-
+		background-size: contain;
+		background-image: url('../img/main-bg-750.jpg');
+		background-position: top center;
 	}
 	@media screen and (max-width: 749px){
-		// background-image: url('../img/main-bg-320.jpg');
+		 background-image: url('../img/main-bg-320.jpg');
 	}
 }
 .img-responsive {
@@ -114,7 +115,7 @@ b, strong {
 	margin: 0 auto;
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
 	screen and (max-width: 1080px) {
-		max-width: 750px;
+		// max-width: 750px;
 		padding: 0 15px;
 		display: flex;
 		flex-wrap: wrap;
@@ -199,9 +200,13 @@ ul,li {
 	text-align: center;
 	border-radius: 10px;
 	
+	@media only screen and (max-width: 1350px) and (orientation: portrait),
+    screen and (max-width: 1080px) {
+		padding: 27px 25px 27px 25px;
+	}
 	@media screen and (max-width: 749px){
-		// min-width: 320px;
-		// font-size: 18px;
+		min-width: auto;
+		font-size: 12px;
 		// padding-top: 19px;
 		// padding-bottom: 25px;
 	}
@@ -247,13 +252,12 @@ ul,li {
 		font-weight: 700;
 		@media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-			min-width: 154px;
-			padding: 14px;
+
 		}
 		@media screen and (max-width: 749px){
-			min-width: 172px;
-			font-size: 20px;
-			padding: 16px;
+			// min-width: 172px;
+			// font-size: 20px;
+			// padding: 16px;
 		}
 		svg {
 			width: 21px;
@@ -271,11 +275,10 @@ ul,li {
 		font-weight: 700;
 		@media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
-			min-width: 55px;
-			padding: 14px;
+
 		}
 		@media screen and (max-width: 749px){
-			min-width: 60px;
+			// min-width: 60px;
 		}
 		span {
 			position: relative;
@@ -374,7 +377,7 @@ ul,li {
 }
 
 .si-button-pulse {
-	border-radius: 7px;
+	border-radius: 10px;
 	&:hover {
 		will-change: transform;
 		transform: translate3d(0, 0, 0);
