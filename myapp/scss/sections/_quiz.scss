@@ -102,7 +102,7 @@
                 order: 1;
                 margin-left: auto;
                 margin-right: auto;
-                width: 67%;
+                width: 92%;
                 max-width: 320px;
             }
             img {
@@ -970,7 +970,7 @@
         screen and (max-width: 1080px) {
             content: "";
             position: absolute;
-            bottom: -73px;
+            bottom: 0;
             right: 0;
             width: 390px;
             height: 100%;
@@ -979,8 +979,8 @@
         }
         @media screen and (max-width: 749px){
             background-position: top center;
-            background-size: 209px;
-            right: -53px;
+            background-size: 407px;
+            right: -69px;
         }
     }
     img {
