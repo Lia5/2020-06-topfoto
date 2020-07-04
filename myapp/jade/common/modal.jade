@@ -1,4 +1,4 @@
-#modalFinish.modal.disabled
+#modalFinish.modal.disabled1
     .modal__wrap  
         .close.modal-close
             svg.t-popup__close-icon(width='23px', height='23px', viewBox='0 0 23 23', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -8,8 +8,10 @@
         .modal__body
             .modal__body-pic
             .modal__title Спасибо!
-            .modal__subtitle Скоро мы с вами свяжемся.<br>
-                span А пока можете ознакомиться <br>с обещанными бонусами
+            .modal__subtitle Можете ознакомиться с обещанными бонусами:
+            a.bonus(href="files/present.pdf" target="_blank")
+                img(src="img/icons/pdf-logo.png" alt="present")
+                span Скачать
 #modalDom.modal.disabled
     .modal__wrap  
         .close.modal-close
@@ -39,9 +41,9 @@
             .modalLeave__form
                 form(class="quizForm", name="popup")
                     // Hidden Required Fields
-                    input(type='hidden', name='project_name', value='Раград')
-                    input(type='hidden', name='admin_email', value='liaforweb@gmail.com')
-                    input(type='hidden', name='form_subject', value='Пошаговая инструкция')
+                    input(type='hidden', name='project_name', value='РаГрад')
+                    input(type='hidden', name='admin_email', value='liaforweb@gmail.com, Azbuka.digital@ya.ru')
+                    input(type='hidden', name='form_subject', value='Подарок - Пошаговая инструкция')
                     // END Hidden Required Fields
                     input(type='hidden', name='info', value='Пошаговая инструкция')
                     input.utm_source.hidden(type='hidden', name='utm_source')

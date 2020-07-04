@@ -14,8 +14,8 @@ section#quiz.quiz
             | в Москве и МО
         form(class="quizForm", name="quiz")
             // Hidden Required Fields
-            input(type='hidden', name='project_name', value='Раград')
-            input(type='hidden', name='admin_email', value='liaforweb@gmail.com')
+            input(type='hidden', name='project_name', value='РаГрад')
+            input(type='hidden', name='admin_email', value='liaforweb@gmail.com, Azbuka.digital@ya.ru')
             input(type='hidden', name='form_subject', value='Квиз')
             // END Hidden Required Fields
             input(type='hidden', name='info', value='Квиз')
@@ -373,7 +373,7 @@ section#quiz.quiz
                             .agree 
                                 span.text--medium Нажимая на кнопку, 
                                 | вы даете согласие на обработку персональных данных и соглашаетесь с 
-                                span.policy политикой конфиденциальности
+                                a(href="policy.html" target="_blank").policy политикой конфиденциальности
                             .step-slide__bottom
                                 .form-line-btn
                                     .quiz__error
@@ -390,6 +390,10 @@ section#quiz.quiz
                             span.text--medium Наш инженер приступил к расчету стоимости. 
                             br
                             | Если у него возникунут опросы, он вам перезвонит. Как только расчет будет готов, мы отправим его Вам.
+                        p Можете ознакомиться с обещанными бонусами:
+                        a.bonus(href="files/present.pdf" target="_blank")
+                            img(src="img/icons/pdf-logo.png" alt="present")
+                            span Скачать
                         .advantages__item.advantages__item--red 
                             span.text--bold Если с Вами оперативно не связались, 
                             | не волнуйтесь, назначенный Вам инженер может быть занят и свяжется с Вами как только освободится

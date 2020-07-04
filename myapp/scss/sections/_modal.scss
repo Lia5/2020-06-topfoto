@@ -185,7 +185,7 @@
     &__body {
       
       padding: 65px 40px 64px;
-      background: #000 url('../img/bg-thank.jpg') no-repeat;
+      background:  url('../img/clouds.jpg') no-repeat;
       background-size: cover;
       background-position: left bottom;
       @media only screen and (max-width: 749px) {
@@ -195,6 +195,7 @@
       }
     }
     &__title {
+      font-weight: 700;
       color: #ff9232;
       @media only screen and (max-width: 749px) {
         font-size: 45px;
@@ -204,7 +205,6 @@
     }
     &__subtitle {
       max-width: 265px;
-      color: #fff;
       font-size: 18px;
       line-height: 28px;
       @media only screen and (max-width: 749px) {
@@ -414,6 +414,29 @@
 }
 #modalDom {
   .modal__body {
-    padding: 2%;
+    padding: 24px;
+  }
+}
+
+.bonus {
+  max-width: 150px;
+  margin: 0 auto;
+  background: $accent;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  img {
+    margin-right: 10px;
+  }
+  span {
+    color: #fff;
+  }
+}
+.step-slide--thank {
+  .bonus {
+    margin-left: 0;
   }
 }

@@ -82,6 +82,9 @@ body {
 	background-position: center;
 	background-size: 100% 100%;
 	z-index: 1;
+	@media only screen and (max-width: 1600px) {
+		background-size: 1670px 100%;
+	}
 	@media only screen and (max-width: 1350px) and (orientation: portrait),
 	screen and (max-width: 1080px) {
 		background-size: contain;
@@ -92,6 +95,11 @@ body {
 		background-size: cover;
 		 background-image: url('../img/main-bg-320.jpg');
 		 background-position-y: -182px;
+	}
+}
+.policy-body {
+	.main {
+		background-image: url(../img/clouds.jpg);
 	}
 }
 .img-responsive {
