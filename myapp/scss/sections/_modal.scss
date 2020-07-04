@@ -279,6 +279,10 @@
     background: #fff url(../img/bg.jpg) no-repeat;
     background-size: cover;
     @media screen and (max-width: 749px) {
+      background-image: url('../img/bg-320.jpg');
+      background-position: bottom center;
+      background-size: 100% 187px;
+      padding-bottom: 190px;
       border-radius: 0;
       padding-left: 15px;
       padding-right: 15px;
