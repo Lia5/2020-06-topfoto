@@ -595,14 +595,29 @@
             background-size: 100% 100%;
             @media only screen and (max-width: 1350px) and (orientation: portrait),
             screen and (max-width: 1080px) {
-                background-size: 108% 100%;
-                background-position: left -30px center;
+                background-image: url('../img/th-bg-750.jpg');
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-size: cover;
+                // background-position: left -30px center;
+            }
+            @media screen and (max-width: 749px){
+                background-image: url('../img/th-bg-320.jpg');
+                padding-left: 15px;
+                padding-right: 15px;
             }
             .quiz__thank {
                 width: 60%;
+
+                @media only screen and (max-width: 1350px) and (orientation: landscape) {
+                    width: 93%;
+                }
                 @media only screen and (max-width: 1350px) and (orientation: portrait),
                 screen and (max-width: 1080px) {
                     width: 76%;
+                }
+                @media screen and (max-width: 749px){
+                    width: 100%;
                 }
             }
             .quiz__last-info {
@@ -614,15 +629,49 @@
                     right: 0;
                     top: 40%;
                 }
+                @media screen and (max-width: 749px){
+                    top: 31%;
+                    right: 10%;
+                }
+                @media screen and (max-width: 544px){
+                    width: auto;
+                    top: auto;
+                    bottom: 0px;
+
+                }
+                @media screen and (max-width: 400px){
+                    right: 0;
+                }
             }
             .step-slide__title {
                 font-size: 53px;
                 line-height: 1;
                 margin-bottom: 20px;
+                @media only screen and (max-width: 1350px) and (orientation: landscape) {
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 749px){
+                    font-size: 28px;
+                    min-height: auto;
+                }
             }
             p {
                 font-size: 20px;
                 line-height: 26px;
+                
+                @media only screen and (max-width: 1350px) and (orientation: landscape) {
+                    max-width: 445px;
+                }
+                @media screen and (max-width: 749px){
+                    font-size: 15px;
+                    margin-left: 15px;
+                }
+            }
+            .quiz__wrap {
+                
+                @media screen and (max-width: 544px){
+                    padding-bottom: 230px;
+                }
             }
         }
         &--last {
@@ -994,13 +1043,18 @@
 }
 .quiz__last-info {
     .advantages__item {
-        width: 41%;
+        width: 200px;
+        padding: 106px 35px 140px ;
     }
 }
 .quiz__thank {
     .advantages__item {
-        width: 32%;
+        width: 200px;
         text-align: center;
+        margin-left: 10%;
+        @media screen and (max-width: 400px){
+            margin-left: 0;
+        }
     }
     
 }

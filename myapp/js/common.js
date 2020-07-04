@@ -330,21 +330,19 @@ $(function() {
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
-
-                if((form.attr("name") == "quiz") && form.find('.useful__input:checked').length) {
+                // && form.find('.useful__input:checked').length
+                if((form.attr("name") == "quiz") ) {
                         
-                console.log('jr');
-                    
 
                     if (!form.find('.empty_field').length) {
                         if(form.attr("name") == "quiz"){
-                            $('.step-slide--last').removeClass('active');
-                            $('.step-slide--thank').addClass('active');
+                            $('.step-slide--last').removeClass('step-slide--active');
+                            $('.step-slide--thank').addClass('step-slide--active');
                             // ym(62113519,'reachGoal','order'); 
                         }
                         $.ajax({
                             type: "POST",
-                            url: "../mail.php", //Change
+                            url: "../grad_new/mail.php", //Change
                             data: form.serialize()
                         }).done(function() {
                             var numModal = form.find('.btn-finish').attr('data-modal');
@@ -357,7 +355,10 @@ $(function() {
                             $('.modal').addClass('disabled');
                             modal.removeClass('disabled');
                             modal.addClass('flex');
-                            $('body').addClass('body-modal-open');
+                            if(form.attr("name") == "popup"){
+                                $('body').addClass('body-modal-open');  
+                            }
+                            
                             setTimeout(function() {
                                 // Done Functions
                                 // form.trigger("reset");
@@ -369,7 +370,7 @@ $(function() {
 
                         $.ajax({
                             method: "POST",
-                            url: "../telegram.php", //Change
+                            url: "../grad_new/telegram.php", //Change
                             data: form.serialize()
                         }).done(function(){});
                     }

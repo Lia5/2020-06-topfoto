@@ -207,6 +207,10 @@
         top: 9px;
         left: -11%;
         max-width: 334px;
+
+        @media screen and (max-width: 1304px)  and (orientation: landscape) {
+            left: -1%;
+        }
         @media only screen and (max-width: 1350px) and (orientation: portrait),
         screen and (max-width: 1080px) {
             position: static;
@@ -325,8 +329,11 @@
             background-image: url('../img/bg-red.png');
         }
         &--last {
-            
-        background-image: url('../img/bg-last.png');
+            margin-left: auto;
+            background-image: url('../img/bg-last.png');
+            @media screen and (max-width: 749px){
+                margin-right: 0;
+            }
         }
     }
     &__item1 {
