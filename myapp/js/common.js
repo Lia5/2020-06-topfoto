@@ -325,13 +325,21 @@ $(function() {
         form.find('.rfield').addClass('empty_field');
 
         // Функция проверки полей формы
-
+        if(form.attr("name") == "popup"){
+            if ($('.useful').find('input:checked').length) {
+                $('.useful__input').removeClass('empty_field rfield');
+                $('.useful__label').removeClass('red');
+                console.log('[[[');
+            }
+        }
         form.find('.rfield').each(function(){
             if($(this).val() != ''){
                 // Если поле не пустое удаляем класс-указание
                 $(this).removeClass('empty_field');
+
+                
                 // && form.find('.useful__input:checked').length
-                if((form.attr("name") == "quiz") ) {
+                if((form.attr("name") == "quiz") || (form.attr("name") == "popup") ) {
                         
 
                     if (!form.find('.empty_field').length) {
@@ -373,10 +381,13 @@ $(function() {
                             url: "../grad_new/telegram.php", //Change
                             data: form.serialize()
                         }).done(function(){});
+                    } else {
+                        console.log('111');
+                        $('.useful__input').addClass('empty_field');
+                        $('.useful__label').addClass('red');
                     }
 
             } else {
-                $('.useful__label').css('border-color', 'red');
             }
             } else {}
         });
