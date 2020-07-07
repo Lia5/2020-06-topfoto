@@ -350,7 +350,7 @@ $(function() {
                         }
                         $.ajax({
                             type: "POST",
-                            url: "../grad_new/mail.php", //Change
+                            url: "../mail.php", //Change
                             data: form.serialize()
                         }).done(function() {
                             var numModal = form.find('.btn-finish').attr('data-modal');
@@ -378,7 +378,7 @@ $(function() {
 
                         $.ajax({
                             method: "POST",
-                            url: "../grad_new/telegram.php", //Change
+                            url: "../telegram.php", //Change
                             data: form.serialize()
                         }).done(function(){});
                     } else {
