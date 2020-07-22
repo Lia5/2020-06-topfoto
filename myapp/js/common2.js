@@ -346,10 +346,10 @@ $(function() {
                         if(form.attr("name") == "quiz"){
                             $('.step-slide--last').removeClass('step-slide--active');
                             $('.step-slide--thank').addClass('step-slide--active');
-                            ym(65723536,'reachGoal','quiz');
+                            ym(65723617,'reachGoal','quiz')
                         }
                         if(form.attr("name") == "popup"){
-                            ym(65723536,'reachGoal','leave')
+                            ym(65723617,'reachGoal','leave')
                         }
                         $.ajax({
                             type: "POST",
